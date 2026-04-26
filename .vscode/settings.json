@@ -1,0 +1,33 @@
+{
+  "cucumberautocomplete.steps": [
+    "./src/steps/*.ts"
+  ],
+  "cucumberautocomplete.syncfeatures": "./src/features/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.customParameters": [
+    {
+      "parameter": "{ab}",
+      "value": "(a|b)"
+    }
+  ],
+  "cucumberautocomplete.skipDocStringsFormat": true,
+  "cucumberautocomplete.formatConfOverride": {
+    "And": 3,
+    "But": "relative"
+  },
+  "cucumberautocomplete.onTypeFormat": true,
+  "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\(",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "files.associations": {
+    "*.feature": "cucumber"
+  },
+  "debug.node.autoAttach": "on",
+  "chat.mcp.serverSampling": {}
+}

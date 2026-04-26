@@ -16,6 +16,12 @@
     "typescript": "^5.7.0"
   },
   "scripts": {
-    "test": "wdio run ./wdio.conf.ts"
+    "test": "wdio run ./conf/wdio.conf.ts",
+    "test:headless": "wdio run ./conf/wdio.headless.conf.ts",
+    "test:browserstack": "wdio run ./conf/wdio.browserstack.conf.ts",
+    "test:dry": "wdio run ./conf/wdio.conf.ts --cucumberOpts.dryRun=true"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

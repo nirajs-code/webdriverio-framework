@@ -10,6 +10,6 @@
         "rootDir": ".",
         "types": ["node"]
     },
-    "include": ["src/**/*", "wdio.conf.ts"],
+    "include": ["src/**/*", "conf/**/*"],
     "exclude": ["node_modules", "dist"]
 }

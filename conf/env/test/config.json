@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://the-internet.herokuapp.com",
+  "testData": {
+    "validUser": {
+      "username": "tomsmith",
+      "password": "SuperSecretPassword!"
+    },
+    "invalidUser": {
+      "username": "foobar",
+      "password": "barfoo"
+    }
+  }
+}
