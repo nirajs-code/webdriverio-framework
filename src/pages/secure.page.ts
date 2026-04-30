@@ -1,10 +1,11 @@
 import { $ } from '@wdio/globals'
-import Page from './page'
 
-class SecurePage extends Page {
+import basePage from './page'
+
+class SecurePage extends basePage {
     get flashAlert() {
         return $('#flash')
     }
 }
 
-export default new SecurePage()
+export default SecurePage

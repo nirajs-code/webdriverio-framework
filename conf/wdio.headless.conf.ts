@@ -1,7 +1,9 @@
+import type { Options } from '@wdio/types'
+
+import { headlessCapabilities } from './wdio.capabilities.conf'
 import { config as baseConfig } from './wdio.conf'
-import { headlessCapabilities } from './wdio.capabilities'
 
 export const config = {
     ...baseConfig,
-    capabilities: headlessCapabilities
-}
+    capabilities: headlessCapabilities,
+} as Options.Testrunner

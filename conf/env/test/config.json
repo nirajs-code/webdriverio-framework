@@ -1,6 +1,6 @@
 {
   "baseUrl": "https://the-internet.herokuapp.com",
-  "testData": {
+  "users": {
     "validUser": {
       "username": "tomsmith",
       "password": "SuperSecretPassword!"
@@ -9,5 +9,9 @@
       "username": "foobar",
       "password": "barfoo"
     }
+  },
+  "testData": {
+    "default_address": "Flat 505, 1 Tidal Basin, E181UP",
+    "mobile": "992320495"
   }
 }

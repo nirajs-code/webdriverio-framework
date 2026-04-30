@@ -1,23 +1,22 @@
-import { $ } from '@wdio/globals'
-import Page from './page'
+import basePage from './page'
+import { selector } from '../lib/selectors'
+import { click, setValue } from '../lib/wdio-utils'
 
-class LoginPage extends Page {
-    get inputUsername() {
-        return $('#username')
+class LoginPage extends basePage {
+    get _inputUsername(): string {
+        return selector('username').Id
     }
-
-    get inputPassword() {
-        return $('#password')
+    get _inputPassword(): string {
+        return selector('password').Id
     }
-
-    get btnSubmit() {
-        return $('button[type="submit"]')
+    get _btnSubmit(): string {
+        return 'button[type="submit"]'
     }
 
     async login(username: string, password: string): Promise<void> {
-        await this.inputUsername.setValue(username)
-        await this.inputPassword.setValue(password)
-        await this.btnSubmit.click()
+        await setValue($(this._inputUsername), username)
+        await setValue($(this._inputPassword), password)
+        await click($(this._btnSubmit))
     }
 
     async open(): Promise<void> {
@@ -25,4 +24,4 @@ class LoginPage extends Page {
     }
 }
 
-export default new LoginPage()
+export default LoginPage
